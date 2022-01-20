@@ -57,7 +57,7 @@ function s_judge(e){
 //スプレッドシート内容取得
 function souji(){
 
-  let spreadSheetById = SpreadsheetApp.openById("1wXh16z7N5tCtXDo_VpfAszhRINrO6fjD6FcCrKi9dSE").getSheetByName("掃除");
+  let spreadSheetById = SpreadsheetApp.openById("スプレッドシートのidを入力").getSheetByName("シートの名前を入力");
   let sheetdata = spreadSheetById.getRange(2,2,9);
   let result = getRandomInt(0, 9);
   let celldata = sheetdata.getValues()[result];
@@ -85,7 +85,7 @@ function getRandomInt(min, max) {
 
 //掃除回数のカウント
 function soujicount(row){
-  let spreadSheetById = SpreadsheetApp.openById("1wXh16z7N5tCtXDo_VpfAszhRINrO6fjD6FcCrKi9dSE").getSheetByName("掃除");
+  let spreadSheetById = SpreadsheetApp.openById("スプレッドシートのidを入力").getSheetByName("シートの名前を入力");
   let range = spreadSheetById.getRange(row+2,3);
   let count = range.getValue();
   if(count==null){
@@ -97,7 +97,7 @@ function soujicount(row){
 
 //スプレッドシートに値を挿入
 function talkapply(body){
-  let spreadSheetById = SpreadsheetApp.openById("1wXh16z7N5tCtXDo_VpfAszhRINrO6fjD6FcCrKi9dSE").getSheetByName("ログ");
+  let spreadSheetById = SpreadsheetApp.openById("スプレッドシートのidを入力").getSheetByName("シートの名前を入力");
   let row;
   for(let i=1; i++;){
     let range = spreadSheetById.getRange(i,1);
@@ -125,7 +125,7 @@ function getnow(){
 
 //任意の文字登録
 function anyapply(applydate){
-  let spreadSheetById = SpreadsheetApp.openById("1wXh16z7N5tCtXDo_VpfAszhRINrO6fjD6FcCrKi9dSE").getSheetByName("Any");
+  let spreadSheetById = SpreadsheetApp.openById("スプレッドシートのidを入力").getSheetByName("シートの名前を入力");
   let row;
   for(let i=1;i++;){
     let range = spreadSheetById.getRange(i,1);
